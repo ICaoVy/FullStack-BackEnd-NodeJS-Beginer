@@ -12,17 +12,22 @@
 //     console.log(`Sever running at http://${hostname}:${port}/`);
 // })
 
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8888;
+const hostname = process.env.HOST_NAME
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.set("views", path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (request, response) => {
-    response.send('Hello World!')
+    response.send('Hello World & Ha Cao Vi ')
 })
 
 app.get("/abc", (req, res) => {
@@ -34,6 +39,6 @@ app.get('/ICao', (req, res) => {
     res.render('sample.ejs');
 })
 
-app.listen(port, () => {
+app.listen(port, hostname, () => {
     console.log(`Example app listening in port : ${port}`);
 })
