@@ -1,0 +1,27 @@
+{
+  "name": "fullstack-backend-nodejs",
+  "version": "1.0.0",
+  "description": "Hoi Dan IT Tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICaoVy/FullStack-BackEnd-NodeJS-Beginer.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "Cao Vy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ICaoVy/FullStack-BackEnd-NodeJS-Beginer/issues"
+  },
+  "homepage": "https://github.com/ICaoVy/FullStack-BackEnd-NodeJS-Beginer#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
